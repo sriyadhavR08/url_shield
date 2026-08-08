@@ -2,6 +2,7 @@ services:
   - type: web
     name: urlshield-api
     env: python
+    plan: free
     rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app.main:app -w 4 -k uvicorn.workers.UvicornWorker
@@ -23,3 +24,4 @@ databases:
   - name: urlshield-db
     databaseName: urlshield
     user: urlshield_user
+    plan: free
