@@ -1,0 +1,114 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  margin: 0;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.dashboardNav {
+  background: var(--bg-color);
+  backdrop-filter: none;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.icon {
+  color: var(--status-safe);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLinks li a {
+  font-weight: 500;
+  transition: var(--transition);
+  color: var(--text-secondary);
+}
+
+.navLinks li a:hover {
+  color: var(--text-primary);
+}
+
+.authLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.loginBtn, .registerBtn {
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius);
+  font-weight: 600 !important;
+}
+
+.loginBtn {
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color);
+}
+
+.loginBtn:hover {
+  background: var(--card-bg);
+}
+
+.registerBtn {
+  background: var(--btn-bg);
+  color: var(--btn-text) !important;
+}
+
+.registerBtn:hover {
+  opacity: 0.9;
+}
+
+.menuIcon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
+  }
+  
+  .navLinks {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    flex-direction: column;
+    background: var(--card-bg);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding: 2rem 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  }
+  
+  .navLinks.active {
+    left: 0;
+  }
+  
+  .authLinks {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

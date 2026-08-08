@@ -1,0 +1,143 @@
+.historyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: var(--text-secondary);
+}
+
+.controlsCard {
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.searchBox, .filterBox {
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 0 1rem;
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 250px;
+}
+
+.searchIcon, .filterIcon {
+  color: var(--text-secondary);
+  margin-right: 0.5rem;
+}
+
+.searchBox input, .filterBox select {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  padding: 0.75rem 0;
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: 1rem;
+}
+
+.searchBox input:focus, .filterBox select:focus {
+  outline: none;
+}
+
+.filterBox select option {
+  background: var(--card-bg);
+  color: var(--text-primary);
+}
+
+.tableCard {
+  padding: 1.5rem;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th, .table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+  color: var(--text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.urlCell {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.statusBadge {
+  font-weight: 600;
+}
+
+.deleteBtn {
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.deleteBtn:hover {
+  color: var(--status-danger);
+  background: rgba(248, 113, 113, 0.1);
+}
+
+.noData {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 3rem !important;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.pagination button {
+  background: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: var(--text-primary);
+  color: var(--bg-color);
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

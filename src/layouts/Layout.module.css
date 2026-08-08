@@ -1,0 +1,36 @@
+.mainLayout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+}
+
+.dashboardLayout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.dashboardWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px; /* Sidebar width */
+}
+
+.dashboardContent {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+  .dashboardWrapper {
+    margin-left: 0;
+  }
+  .dashboardContent {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,138 @@
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* Adjust based on navbar height */
+  padding: 2rem;
+}
+
+.authCard {
+  width: 100%;
+  max-width: 450px;
+  padding: 3rem 2rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.authHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.authHeader h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.authHeader p {
+  color: var(--text-secondary);
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-secondary);
+}
+
+.inputGroup input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: var(--status-safe);
+  box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.2);
+}
+
+.authOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.forgotPassword {
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.forgotPassword:hover {
+  color: var(--text-primary);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.authFooter {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--text-secondary);
+}
+
+.authFooter a {
+  color: var(--status-safe);
+  font-weight: 500;
+}
+
+.authFooter a:hover {
+  text-decoration: underline;
+}
+
+.errorAlert {
+  background-color: rgba(248, 113, 113, 0.1);
+  border: 1px solid var(--status-danger);
+  color: var(--status-danger);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}

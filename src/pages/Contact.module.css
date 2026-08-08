@@ -1,0 +1,138 @@
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.contactCard {
+  padding: 3rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.formRow > div {
+  flex: 1;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputGroup label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 1rem;
+  color: var(--text-secondary);
+}
+
+.textareaIcon {
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.inputWrapper input, .inputWrapper textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  transition: var(--transition);
+}
+
+.inputWrapper input {
+  padding: 1rem 1rem 1rem 3rem;
+}
+
+.inputWrapper textarea {
+  padding: 1rem 1rem 1rem 3rem;
+  resize: vertical;
+}
+
+.inputWrapper .noIconInput {
+  padding-left: 1rem;
+}
+
+.inputWrapper input:focus, .inputWrapper textarea:focus {
+  outline: none;
+  border-color: var(--status-safe);
+}
+
+.submitBtn {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 1rem 2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.successMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  gap: 1rem;
+}
+
+.successIcon {
+  font-size: 4rem;
+  color: var(--status-safe);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+  }
+}
